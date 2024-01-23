@@ -2,8 +2,6 @@ services:
   app:
     build:
       dockerfile: Dockerfile.production
-    command: npm test
+    command: bash -c 'npm test'
     image: vpozdyaev/devops-for-programmers-project-74
-    volumes:
-      - ./app:/app
 
