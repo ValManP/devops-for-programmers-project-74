@@ -5,5 +5,8 @@ compose-stop:
 	docker compose stop
 
 compose-ci:
-	docker-compose -f docker-compose.yml up --abort-on-container-exit --exit-code-from app
+	docker compose -f docker-compose.yml up --abort-on-container-exit --exit-code-from app
+
+test:
+	docker compose run app npm test
 
