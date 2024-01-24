@@ -4,5 +4,5 @@ services:
       dockerfile: Dockerfile.production
     command: bash -c 'npm test'
     platform: linux/amd64
-    image: vpozdyaev/devops-for-programmers-project-74
+    # image: vpozdyaev/devops-for-programmers-project-74
 

@@ -28,5 +28,6 @@ jobs:
         uses: docker/build-push-action@v5
         with:
           push: true
+          file: Dockerfile.production
           tags: vpozdyaev/devops-for-programmers-project-74:latest
 
