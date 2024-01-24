@@ -2,7 +2,17 @@ services:
   app:
     build:
       dockerfile: Dockerfile.production
-    command: bash -c 'npm test'
+    command: npm test
     platform: linux/amd64
     image: vpozdyaev/devops-for-programmers-project-74
+    depends_on:
+      - db
+  
+  db:
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_USER: ${DATABASE_USERNAME}
+      POSTGRES_PASSWORD: ${DATABASE_PASSWORD}
+      POSTGRES_DB: ${DATABASE_NAME}
 

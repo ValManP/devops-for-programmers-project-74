@@ -11,6 +11,9 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+
+      - name: Create env file
+        run: echo "${{ secrets.ENV_FILE }}" > .env
       
       - name: Run test
         run: make ci
