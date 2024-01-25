@@ -16,7 +16,7 @@ jobs:
         run: echo "${{ secrets.ENV_FILE }}" > .env
       
       - name: Run test
-        run: make ci
+        run: make test
 
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
